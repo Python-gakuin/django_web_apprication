@@ -20,7 +20,7 @@ class Review(models.Model):
     title = models.CharField(max_length=100)
     text = models.TextField()
     rate = models.IntegerField(choices=RATE_CHOICES)
-    user = models.ForeignKey('auth.user', on_delete=models.CASCADE)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
